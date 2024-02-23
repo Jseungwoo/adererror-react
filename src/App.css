@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+.Navbar {
+  display: flex;
+  justify-content: space-between; /* 요소 사이에 공간을 균등하게 분배하여 요소를 양 끝으로 이동시킵니다. */
+  align-items: center; /* 수직 방향에서 요소를 가운데 정렬합니다. */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu-bar {
+  margin-right: auto; /* 오른쪽 마진을 자동으로 설정하여 요소를 가장 오른쪽으로 이동시킵니다. */
+  margin: 15px; /* 위아래 좌우 마진을 15px로 설정합니다. */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  width: 100px; /* 로고 이미지의 너비를 100px로 설정합니다. */
+  margin: 15px; /* 위아래 좌우 마진을 15px로 설정합니다. */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-icon {
+  margin-left: auto; /* 왼쪽 마진을 자동으로 설정하여 요소를 가장 왼쪽으로 이동시킵니다. */
+  margin: 15px; /* 위아래 좌우 마진을 15px로 설정합니다. */
+  cursor: pointer;
+}
+
+.space {
+  border-bottom: 1px solid black; /* 검은색의 아래쪽 테두리를 추가하여 공간을 구분합니다. */
+}
+
+.text {
+  font-size: 10pt; /* 텍스트의 크기를 10pt로 설정합니다. */
+  margin: 10px; /* 위아래 좌우 마진을 10px로 설정합니다. */
+}
+
+.menu-list {
+  font-size: 10pt; /* 메뉴 항목의 텍스트 크기를 10pt로 설정합니다. */
+  display: flex; /* 가로로 나열하기 위해 플렉스 박스로 설정합니다. */
+  list-style-type: none; /* 리스트 스타일을 제거합니다. */
+  padding: 0; /* 내부 패딩을 제거합니다. */
+  margin: 0; /* 마진을 제거합니다. */
+}
+
+.menu-list li {
+  padding: 10px; /* 각 메뉴 항목의 내부 패딩을 10px로 설정합니다. */
+  margin-right: 10px; /* 오른쪽 마진을 10px로 설정하여 각 메뉴 항목 사이의 간격을 조절합니다. */
+}
+
+.product-list {
+  list-style: none; /* 리스트 스타일 제거 */
+  padding: 0; /* 내부 패딩 제거 */
+  margin: 0; /* 마진 제거 */
+  display: flex; /* 가로로 나열하기 위해 플렉스 박스로 설정 */
+  flex-wrap: wrap; /* 넘칠 경우 자동으로 줄 바꿈 */
+}
+
+.product-item {
+  width: calc(25% - 2px); /* 가로로 4개씩 배치하고 간격을 제공하기 위해 25%로 설정하고 테두리 두께만큼 감소 */
+  border: 1px solid black; /* 검은색 테두리 추가 */
+  padding: 20px; /* 내부 패딩 추가 */
+  box-sizing: border-box; /* 테두리와 패딩 포함한 전체 요소 크기로 계산하도록 설정 */
+  margin: 1px; /* 각 요소의 마진을 추가하여 겹치지 않고 붙도록 설정 */
+}
+
+.product-item:hover {
+  cursor: pointer;
+}
+
+.img {
+  height: 50vh;
+}
+
+.product-name {
+  
+  font-weight: bold; /* 글자를 찐하게 설정 */
+}
+
+.price {
+  font-size: 10pt;
+  font-weight: lighter; /* 글자를 연하게 설정 */
+  margin-right: auto;/* 오른쪽 마진을 자동으로 설정하여 요소를 가장 오른쪽으로 이동시킵니다. */
+}
+
+.login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 300px; /* 로그인 폼의 폭 설정 */
+  margin: auto; /* 가운데 정렬을 위해 margin을 auto로 설정 */
 }
 
-.App-link {
-  color: #61dafb;
+.input-group {
+  margin-bottom: 15px; /* 입력 그룹 사이의 간격 조정 */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type='email'],
+input[type='password'] {
+  width: 100%; /* 입력 칸의 가로를 폼 너비에 맞게 확장 */
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+button {
+  width: 100%; /* 버튼의 가로를 폼 너비에 맞게 확장 */
+  padding: 10px;
+  background-color: #007bff; /* 배경색 변경 */
+  color: white; /* 텍스트 색상 변경 */
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3; /* 호버 상태 배경색 변경 */
+}
+
+.product-img{
+  display: flex;
+  justify-content: flex-end;
 }
